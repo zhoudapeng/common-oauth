@@ -1,0 +1,23 @@
+server:
+  port: 9999
+  session:
+    timeout: 30
+  context-path: /
+  tomcat:
+    accesslog:
+      enabled: true
+      directory: /opt/export/logs/common-oauth
+    protocol-header: x-forwarded-proto
+    remote-ip-header: x-forwarded-for
+    basedir:
+    background-processor-delay: 30
+    uri-encoding: UTF-8
+spring:
+  http:
+    encoding:
+      charset: utf-8
+      force: true
+      enabled: true
+oauth:
+    domain: oauth.xxx.com
+
